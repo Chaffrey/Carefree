@@ -1,0 +1,656 @@
+<!DOCTYPE html><html><head>
+      <title>requirement</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\CHAffrey\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.5.0\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+
+      
+      
+      
+      
+      
+      
+      
+
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="%E8%BD%AF%E4%BB%B6%E9%9C%80%E6%B1%82%E8%A7%84%E6%A0%BC%E8%AF%B4%E6%98%8E%E4%B9%A6%E8%BD%AF%E4%BB%B6%E9%9C%80%E6%B1%82%E8%A7%84%E8%8C%83">&#x8F6F;&#x4EF6;&#x9700;&#x6C42;&#x89C4;&#x683C;&#x8BF4;&#x660E;&#x4E66;&lt;&#x8F6F;&#x4EF6;&#x9700;&#x6C42;&#x89C4;&#x8303;&gt;</h1>
+
+<h2 class="mume-header" id="1-%E4%BB%8B%E7%BB%8D">1. &#x4ECB;&#x7ECD;</h2>
+
+<h3 class="mume-header" id="11-%E7%9B%AE%E7%9A%84">1.1 &#x76EE;&#x7684;</h3>
+
+<ul>
+<li>&#x672C;&#x8F6F;&#x4EF6;&#x9700;&#x6C42;&#x89C4;&#x8303;&#x63CF;&#x8FF0;&#x4E86;&#x98DF;&#x5802;&#x8BA2;&#x9910;&#x7CFB;&#x7EDF;&#xFF08;COS&#xFF09;1.0&#x7248;&#x672C;&#x8F6F;&#x4EF6;&#x4E2D;&#x7684;&#x529F;&#x80FD;&#x6027;&#x548C;&#x975E;&#x529F;&#x80FD;&#x6027;&#x9700;&#x6C42;&#x3002;&#x6B64;&#x6587;&#x6863;&#x7531;&#x9879;&#x76EE;&#x56E2;&#x961F;&#x6210;&#x5458;&#x4F7F;&#x7528;&#xFF0C;&#x4EE5;&#x5B9E;&#x73B0;&#x5E76;&#x68C0;&#x9A8C;&#x6B63;&#x786E;&#x7684;&#x7CFB;&#x7EDF;&#x529F;&#x80FD;&#x3002;&#x9664;&#x975E;&#x53E6;&#x6709;&#x8BF4;&#x660E;&#xFF0C;&#x5426;&#x5219;1.0&#x7248;&#x672C;&#x4E2D;&#x627F;&#x8BFA;&#x5305;&#x542B;&#x8FD9;&#x91CC;&#x6240;&#x89C4;&#x8303;&#x7684;&#x6240;&#x6709;&#x9700;&#x6C42;&#x3002;</li>
+</ul>
+<h3 class="mume-header" id="12-%E6%96%87%E6%A1%A3%E7%BA%A6%E5%AE%9A">1.2 &#x6587;&#x6863;&#x7EA6;&#x5B9A;</h3>
+
+<ul>
+<li>&#x672C;SRS&#x4E2D;&#x672A;&#x4F7F;&#x7528;&#x7279;&#x5B9A;&#x4E66;&#x9762;&#x7EA6;&#x5B9A;&#x3002;</li>
+</ul>
+<h3 class="mume-header" id="13-%E9%A1%B9%E7%9B%AE%E8%8C%83%E5%9B%B4">1.3 &#x9879;&#x76EE;&#x8303;&#x56F4;</h3>
+
+<ul>
+<li>COS&#x7CFB;&#x7EDF;&#x5C06;&#x5141;&#x8BB8;Process Impact&#x516C;&#x53F8;&#x5458;&#x5DE5;&#x5728;&#x7EBF;&#x4ECE;&#x516C;&#x53F8;&#x98DF;&#x5802;&#x8BA2;&#x9910;&#x5E76;&#x9001;&#x5230;&#x56ED;&#x533A;&#x6307;&#x5B9A;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x5728;&#x300A;&#x98DF;&#x5802;&#x8BA2;&#x9910;&#x7CFB;&#x7EDF;&#x613F;&#x666F;&#x4E0E;&#x8303;&#x56F4;&#x6587;&#x6863;&#x300B;&#x4E2D;&#x6709;&#x8BE6;&#x5C3D;&#x7684;&#x63CF;&#x8FF0;&#xFF0C;&#x5E76;&#x4E14;&#x9610;&#x8FF0;&#x4E86;&#x5728;&#x6B64;&#x7248;&#x672C;&#x4E2D;&#x89C4;&#x5212;&#x7684;&#x9700;&#x8981;&#x5B8C;&#x6574;&#x6216;&#x90E8;&#x5206;&#x5B9E;&#x73B0;&#x7684;&#x7279;&#x6027;&#x3002;</li>
+</ul>
+<h3 class="mume-header" id="14-%E5%8F%82%E8%80%83">1.4 &#x53C2;&#x8003;</h3>
+
+<ol>
+<li>&#x300A;&#x98DF;&#x5802;&#x8BA2;&#x9910;&#x7CFB;&#x7EDF;&#x613F;&#x666F;&#x4E0E;&#x8303;&#x56F4;&#x6587;&#x6863;&#x300B;&#xFF0C;Wiegers&#x3001;Karl&#xFF0C;<a href="http://www.processimpact.com/projects/COS/COS%20Vision%20and%20Scope.docx">www.processimpact.com/projects/COS/COS Vision and Scope.docx</a></li>
+<li>&#x300A;Process Impact&#x516C;&#x53F8;&#x5185;&#x7F51;&#x5F00;&#x53D1;&#x6807;&#x51C6;&#xFF08;1.3&#x7248;&#xFF09;&#x300B;&#xFF0C;Beatty&#xFF0C;<a href="http://www.processimpact.com/corporate/standards/PI%20Intranet%20Development%20Standard.pdf">www.processimpact.com/corporate/standards/PI Intranet Development Standard.pdf</a></li>
+<li>&#x300A;Process Impact&#x516C;&#x53F8;&#x4E92;&#x8054;&#x7F51;&#x5E94;&#x7528;&#x7528;&#x6237;&#x754C;&#x9762;&#x6807;&#x51C6;&#xFF08;2.0&#x7248;&#xFF09;&#x300B;&#xFF0C;Rath&#x3001;Andrew&#xFF0C;<a href="http://www.processimpact.com/corporate/standards/PI%20Internet%20UI%20Standard.pdf">www.processimpact.com/corporate/standards/PI Internet UI Standard.pdf</a></li>
+</ol>
+<h2 class="mume-header" id="2-%E6%80%BB%E8%BF%B0">2 &#x603B;&#x8FF0;</h2>
+
+<h3 class="mume-header" id="21-%E4%BA%A7%E5%93%81%E8%A7%86%E8%A7%92">2.1 &#x4EA7;&#x54C1;&#x89C6;&#x89D2;</h3>
+
+<ul>
+<li>&#x98DF;&#x5802;&#x8BA2;&#x9910;&#x7CFB;&#x7EDF;&#x662F;&#x4E00;&#x5957;&#x65B0;&#x7684;&#x8F6F;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x7528;&#x4E8E;&#x66FF;&#x4EE3;Process Impact&#x98DF;&#x5802;&#x73B0;&#x5728;&#x901A;&#x8FC7;&#x4EBA;&#x5DE5;&#x548C;&#x7535;&#x8BDD;&#x5904;&#x7406;&#x8BA2;&#x9910;&#x5230;&#x53D6;&#x9910;&#x7684;&#x65B9;&#x5F0F;&#x3002;</li>
+<li>&#x56FE;C-2&#x4E2D;&#x7684;&#x73AF;&#x5883;&#x56FE;&#x7ED8;&#x5236;&#x4E86;1.0&#x7248;&#x672C;&#x7684;&#x5916;&#x90E8;&#x5B9E;&#x4F53;&#x548C;&#x7CFB;&#x7EDF;&#x63A5;&#x53E3;&#x3002;</li>
+<li>&#x9884;&#x671F;&#x7CFB;&#x7EDF;&#x5C06;&#x7ECF;&#x8FC7;&#x591A;&#x4E2A;&#x7248;&#x672C;&#x7684;&#x8FDB;&#x5316;&#xFF0C;&#x5E76;&#x4E14;&#x6700;&#x7EC8;&#x4E3A;&#x4E00;&#x4E9B;&#x5F53;&#x5730;&#x9910;&#x9986;&#x8FDE;&#x63A5;&#x5230;&#x4E92;&#x8054;&#x7F51;&#x8BA2;&#x9910;&#x670D;&#x52A1;&#x4EE5;&#x53CA;&#x652F;&#x6301;&#x50A8;&#x84C4;&#x5361;&#x548C;&#x4FE1;&#x7528;&#x5361;&#x7684;&#x9274;&#x6743;&#x670D;&#x52A1;&#x3002;</li>
+</ul>
+<h3 class="mume-header" id="22-%E7%94%A8%E6%88%B7%E7%BE%A4%E5%8F%8A%E7%89%B9%E5%BE%81">2.2 &#x7528;&#x6237;&#x7FA4;&#x53CA;&#x7279;&#x5F81;</h3>
+
+<table>
+<thead>
+<tr>
+<th>&#x7528;&#x6237;&#x7FA4;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x987E;&#x5BA2;&#xFF08;&#x9996;&#x8981;&#xFF09;</td>
+<td>&#x987E;&#x5BA2;&#x662F;&#x5E0C;&#x671B;&#x4ECE;&#x516C;&#x53F8;&#x98DF;&#x5802;&#x8FDB;&#x884C;&#x8BA2;&#x5916;&#x5356;&#x7684;Process Impact&#x516C;&#x53F8;&#x5458;&#x5DE5;&#x3002;&#x6F5C;&#x5728;&#x987E;&#x5BA2;&#x5927;&#x7EA6;&#x6709;600&#x540D;&#xFF0C;&#x9884;&#x8BA1;&#x5176;&#x4E2D;300&#x4EBA;&#x5E73;&#x5747;&#x6BCF;&#x5468;&#x6BCF;&#x4EBA;&#x4F7F;&#x7528;COS&#x7CFB;&#x7EDF;5&#x6B21;&#x3002;&#x6709;&#x65F6;&#xFF0C;&#x987E;&#x5BA2;&#x4F1A;&#x4E3A;&#x56E2;&#x961F;&#x4F1A;&#x8BAE;&#x6216;&#x8BBF;&#x5BA2;&#x9884;&#x8BA2;&#x591A;&#x4EFD;&#x3002;&#x4F30;&#x8BA1;60%&#x7684;&#x8BA2;&#x9910;&#x7531;&#x516C;&#x53F8;&#x5185;&#x7F51;&#x4E0B;&#x5355;&#xFF0C;40%&#x7684;&#x8BA2;&#x9910;&#x4ECE;&#x5BB6;&#x4E2D;&#x6216;&#x4F7F;&#x7528;&#x667A;&#x80FD;&#x7535;&#x8BDD;&#x548C;&#x5E73;&#x677F;&#x7535;&#x8111;&#x4E0B;&#x5355;</td>
+</tr>
+<tr>
+<td>&#x98DF;&#x5802;&#x5DE5;&#x4F5C;&#x4EBA;&#x5458;</td>
+<td>Process Impact&#x516C;&#x53F8;&#x98DF;&#x5802;&#x96C7;&#x4F63;&#x4E86;&#x7EA6;20&#x540D;&#x98DF;&#x5802;&#x5DE5;&#x4F5C;&#x4EBA;&#x5458;&#xFF0C;&#x4ED6;&#x4EEC;&#x5C06;&#x4ECE;COS&#x7CFB;&#x7EDF;&#x63A5;&#x6536;&#x8BA2;&#x5355;&#x3001;&#x5907;&#x9910;&#xFF0C;&#x4E3A;&#x5916;&#x5356;&#x6253;&#x5305;&#x5E76;&#x8BF7;&#x6C42;&#x9001;&#x9910;&#x3002;&#x5927;&#x591A;&#x6570;&#x98DF;&#x5802;&#x5DE5;&#x4F5C;&#x4EBA;&#x5458;&#x90FD;&#x9700;&#x8981;&#x63A5;&#x53D7;&#x57F9;&#x8BAD;&#xFF0C;&#x5B66;&#x4E60;&#x5982;&#x4F55;&#x4F7F;&#x7528;COS&#x7CFB;&#x7EDF;&#x7684;&#x8F6F;&#x786C;&#x4EF6;</td>
+</tr>
+<tr>
+<td>&#x83DC;&#x5355;&#x7BA1;&#x7406;&#x5458;</td>
+<td>&#x83DC;&#x5355;&#x7BA1;&#x7406;&#x5458;&#x662F;&#x4E00;&#x540D;&#x98DF;&#x5802;&#x96C7;&#x5458;&#xFF0C;&#x8D1F;&#x8D23;&#x521B;&#x5EFA;&#x548C;&#x7EF4;&#x62A4;&#x6BCF;&#x5929;&#x98DF;&#x5802;&#x53EF;&#x4F9B;&#x5E94;&#x83DC;&#x54C1;&#x7684;&#x83DC;&#x5355;&#x3002;&#x6709;&#x4E9B;&#x83DC;&#x5355;&#x9879;&#x53EF;&#x80FD;&#x65E0;&#x6CD5;&#x5916;&#x9001;&#x3002;&#x83DC;&#x5355;&#x7BA1;&#x7406;&#x5458;&#x8FD8;&#x4F1A;&#x5B9A;&#x4E49;&#x6BCF;&#x5929;&#x7684;&#x7279;&#x8272;&#x83DC;&#x3002;&#x83DC;&#x5355;&#x7BA1;&#x7406;&#x5458;&#x9700;&#x8981;&#x5B9A;&#x671F;&#x7F16;&#x8F91;&#x5DF2;&#x6709;&#x7684;&#x83DC;&#x5355;</td>
+</tr>
+<tr>
+<td>&#x9001;&#x9910;&#x4EBA;&#x5458;</td>
+<td>&#x5F53;&#x98DF;&#x5802;&#x5DE5;&#x4F5C;&#x4EBA;&#x5458;&#x51C6;&#x5907;&#x5916;&#x5356;&#x8BA2;&#x5355;&#x65F6;&#xFF0C;&#x4ED6;&#x4EEC;&#x4F1A;&#x5411;&#x9001;&#x9910;&#x4EBA;&#x5458;&#x7684;&#x667A;&#x80FD;&#x624B;&#x673A;&#x53D1;&#x9001;&#x9001;&#x9910;&#x8BF7;&#x6C42;&#x3002;&#x9001;&#x9910;&#x4EBA;&#x5458;&#x63D0;&#x53D6;&#x8BA2;&#x9910;&#x5E76;&#x9001;&#x81F3;&#x987E;&#x5BA2;&#x3002;&#x9001;&#x9910;&#x4EBA;&#x5458;&#x4E0E;COS&#x7CFB;&#x7EDF;&#x7684;&#x5176;&#x4ED6;&#x4EA4;&#x4E92;&#x5305;&#x62EC;&#x786E;&#x8BA4;&#x8BA2;&#x9910;&#x662F;&#x5426;&#x9001;&#x8FBE;</td>
+</tr>
+</tbody>
+</table>
+<h3 class="mume-header" id="23-%E6%93%8D%E4%BD%9C%E7%8E%AF%E5%A2%83">2.3 &#x64CD;&#x4F5C;&#x73AF;&#x5883;</h3>
+
+<pre class="language-text">OE-1&#xFF1A;OCS&#x7CFB;&#x7EDF;&#x5C06;&#x53EF;&#x4EE5;&#x5728;&#x5982;&#x4E0B;&#x7F51;&#x9875;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x6B63;&#x5E38;&#x4F7F;&#x7528;&#xFF1A;Windows Internet Explorer&#x7248;&#x672C;7&#x3001;8&#x3001;9&#xFF1B;Firefox&#x7248;&#x672C;12&#x81F3;26&#xFF1B;Google Chrome&#x5168;&#x90E8;&#x7248;&#x672C;&#xFF1B;Apple Safari4.0&#x81F3;8.0
+OE-2&#xFF1A;COS&#x7CFB;&#x7EDF;&#x95FA;&#x6028;&#x8FD0;&#x884C;&#x4E8E;&#x5F53;&#x524D;&#x4F01;&#x4E1A;&#x5BA1;&#x6279;&#x901A;&#x8FC7;&#x7248;&#x672C;&#x7684;Redhat Linux&#x670D;&#x52A1;&#x5668;&#x548C;Apache HTTP&#x670D;&#x52A1;&#x5668;
+OE-3&#xFF1A;COS&#x7CFB;&#x7EDF;&#x5C06;&#x5141;&#x8BB8;&#x7528;&#x6237;&#x4ECE;&#x4F01;&#x4E1A;&#x5185;&#x7F51;&#x3001;VPN&#x4E92;&#x8054;&#x7F51;&#x8FDE;&#x63A5;&#x6216;&#x4F7F;&#x7528;Android&#x3001;IOS&#x3001;Windows&#x667A;&#x80FD;&#x624B;&#x673A;&#x548C;&#x5E73;&#x677F;&#x7535;&#x8111;&#x8FDB;&#x884C;&#x8BBF;&#x95EE;
+</pre>
+<h3 class="mume-header" id="24-%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E7%BA%A6%E6%9D%9F">2.4 &#x8BBE;&#x8BA1;&#x4E0E;&#x5B9E;&#x73B0;&#x7EA6;&#x675F;</h3>
+
+<pre class="language-text">CO-1&#xFF1A; &#x7CFB;&#x7EDF;&#x7684;&#x8BBE;&#x8BA1;&#x3001;&#x4EE3;&#x7801;&#x3001;&#x7EF4;&#x62A4;&#x6587;&#x6863;&#x5E94;&#x9075;&#x5FAA;&#x300A;&#x5F71;&#x54CD;&#x529B;&#x8FC7;&#x7A0B;&#x5185;&#x7F51;&#x5F00;&#x53D1;&#x6807;&#x51C6;&#xFF08;1.3&#x7248;&#xFF09;&#x300B;
+CO-2&#xFF1A; &#x7CFB;&#x7EDF;&#x5C06;&#x4F7F;&#x7528;&#x5F53;&#x524D;&#x4F01;&#x4E1A;&#x6807;&#x51C6;Oracle&#x6570;&#x636E;&#x5E93;&#x5F15;&#x64CE;
+CO-3&#xFF1A; &#x6240;&#x6709;HTML&#x4EE3;&#x7801;&#x5E94;&#x9075;&#x5FAA;HTML5.0&#x6807;&#x51C6;
+</pre>
+<h3 class="mume-header" id="25-%E5%81%87%E8%AE%BE%E4%B8%8E%E4%BE%9D%E8%B5%96">2.5 &#x5047;&#x8BBE;&#x4E0E;&#x4F9D;&#x8D56;</h3>
+
+<pre class="language-text">AS-1&#xFF1A; &#x8BA4;&#x4E3A;&#x5458;&#x5DE5;&#x5728;&#x5DE5;&#x4F5C;&#x65E5;&#x5728;&#x7EBF;&#xFF0C;&#x56E0;&#x6B64;&#x98DF;&#x5802;&#x4F1A;&#x5728;&#x6BCF;&#x4E2A;&#x5DE5;&#x4F5C;&#x65E5;&#x5F00;&#x653E;&#x65E9;&#x3001;&#x4E2D;&#x3001;&#x665A;&#x4E09;&#x9910;
+DE-1&#xFF1A; COS&#x7CFB;&#x7EDF;&#x7684;&#x8FD0;&#x884C;&#x4F9D;&#x8D56;&#x4E8E;&#x4E3A;&#x4E86;&#x85AA;&#x8D44;&#x7CFB;&#x7EDF;&#x80FD;&#x591F;&#x63A5;&#x53D7;COS&#x7CFB;&#x7EDF;&#x7684;&#x8BA2;&#x5355;&#x652F;&#x4ED8;&#x8BF7;&#x6C42;&#x800C;&#x505A;&#x7684;&#x4FEE;&#x6539;
+DE-2&#xFF1A; COS&#x7CFB;&#x7EDF;&#x7684;&#x8FD0;&#x884C;&#x4F9D;&#x8D56;&#x4E8E;&#x4E3A;&#x4E86;&#x5728;COS&#x7CFB;&#x7EDF;&#x63A5;&#x53D7;&#x8BA2;&#x9910;&#x65F6;&#x66F4;&#x65B0;&#x83DC;&#x54C1;&#x9879;&#x7684;&#x6709;&#x6548;&#x6027;&#x800C;&#x5BF9;&#x98DF;&#x5802;&#x5E93;&#x5B58;&#x7CFB;&#x7EDF;&#x6240;&#x505A;&#x7684;&#x4FEE;&#x6539;
+</pre>
+<h2 class="mume-header" id="3-%E7%B3%BB%E7%BB%9F%E7%89%B9%E6%80%A7">3. &#x7CFB;&#x7EDF;&#x7279;&#x6027;</h2>
+
+<h3 class="mume-header" id="31-%E4%BB%8E%E9%A3%9F%E5%A0%82%E8%AE%A2%E9%A4%90">3.1 &#x4ECE;&#x98DF;&#x5802;&#x8BA2;&#x9910;</h3>
+
+<h4 class="mume-header" id="311-%E6%8F%8F%E8%BF%B0">3.1.1 &#x63CF;&#x8FF0;</h4>
+
+<ul>
+<li>&#x8EAB;&#x4EFD;&#x7ECF;&#x8FC7;&#x9A8C;&#x8BC1;&#x7684;&#x98DF;&#x5802;&#x987E;&#x5BA2;&#x80FD;&#x591F;&#x8BA2;&#x9910;&#xFF0C;&#x5E76;&#x8981;&#x6C42;&#x9001;&#x9910;&#x81F3;&#x6307;&#x5B9A;&#x7684;&#x516C;&#x53F8;&#x4F4D;&#x7F6E;&#x6216;&#x5230;&#x98DF;&#x5802;&#x81EA;&#x53D6;&#x3002;&#x987E;&#x5BA2;&#x5982;&#x679C;&#x8FD8;&#x6CA1;&#x6709;&#x51C6;&#x5907;&#x597D;&#xFF0C;&#x53EF;&#x4EE5;&#x53D6;&#x6D88;&#x6216;&#x4FEE;&#x6539;&#x8BA2;&#x9910;&#x8BA2;&#x5355;&#x3002;</li>
+<li>&#x4F18;&#x5148;&#x7EA7;=&#x9AD8;&#x3002;</li>
+</ul>
+<h4>3.1.2 &#x529F;&#x80FD;&#x6027;&#x9700;&#x6C42;</h4>
+<pre class="language-text">&#xFF08;&#x7565;&#xFF09;
+</pre>
+<h3 class="mume-header" id="32-%E4%BB%8E%E9%A5%AD%E9%A6%86%E8%AE%A2%E9%A4%90">3.2 &#x4ECE;&#x996D;&#x9986;&#x8BA2;&#x9910;</h3>
+
+<pre class="language-text">&#xFF08;&#x7565;&#xFF09;
+</pre>
+<h3 class="mume-header" id="33-%E5%88%9B%E5%BB%BA-%E6%9F%A5%E7%9C%8B-%E4%BF%AE%E6%94%B9%E4%BB%A5%E5%8F%8A%E5%88%A0%E9%99%A4%E5%B7%B2%E8%AE%A2%E7%9A%84%E8%8F%9C%E5%93%81">3.3 &#x521B;&#x5EFA;&#x3001;&#x67E5;&#x770B;&#x3001;&#x4FEE;&#x6539;&#x4EE5;&#x53CA;&#x5220;&#x9664;&#x5DF2;&#x8BA2;&#x7684;&#x83DC;&#x54C1;</h3>
+
+<pre class="language-text">(&#x7565;)
+</pre>
+<h3 class="mume-header" id="34-%E5%88%9B%E5%BB%BA-%E6%9F%A5%E7%9C%8B-%E4%BF%AE%E6%94%B9%E4%BB%A5%E5%8F%8A%E5%88%A0%E9%99%A4%E9%A3%9F%E5%A0%82%E8%8F%9C%E5%93%81">3.4 &#x521B;&#x5EFA;&#x3001;&#x67E5;&#x770B;&#x3001;&#x4FEE;&#x6539;&#x4EE5;&#x53CA;&#x5220;&#x9664;&#x98DF;&#x5802;&#x83DC;&#x54C1;</h3>
+
+<pre class="language-text">(&#x7565;)
+</pre>
+<h2 class="mume-header" id="4-%E6%95%B0%E6%8D%AE%E9%9C%80%E6%B1%82">4. &#x6570;&#x636E;&#x9700;&#x6C42;</h2>
+
+<h3 class="mume-header" id="41-%E9%80%BB%E8%BE%91%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B">4.1 &#x903B;&#x8F91;&#x6570;&#x636E;&#x6A21;&#x578B;</h3>
+
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentscripttype="application/ecmascript" contentstyletype="text/css" height="715px" preserveAspectRatio="none" style="width:348px;height:715px;background:#FFC0CB;" version="1.1" viewBox="0 0 348 715" width="348px" zoomAndPan="magnify"><defs><filter height="300%" id="fejzoopa6qamw" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[6a1c241cadd55c3da51b07c6bb69e86a]
+class 顾客--><rect fill="#FEFECE" filter="url(#fejzoopa6qamw)" height="48" id="&#x987E;&#x5BA2;" style="stroke: #A80036; stroke-width: 1.5;" width="56" x="148" y="8"/><ellipse cx="163" cy="24" fill="#90EE90" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M159.5313,18.7813 L159.5313,17.6875 L166.6406,17.6875 L167.5313,20.5 L166.625,20.8438 Q165.9844,19.6406 165.4531,19.2188 Q164.9375,18.7813 164.3281,18.7813 L162.4688,18.7813 Q162.3281,18.7813 162.2656,18.8281 Q162.2188,18.8594 162.2188,18.9688 L162.2188,22.7344 L163.7969,22.7344 Q164.2969,22.7344 164.5,22.5156 Q164.7188,22.2813 164.7188,21.75 L164.7188,21.0156 L165.7969,21.0156 L165.7969,25.6094 L164.7188,25.6094 L164.7188,25 Q164.7188,24.3906 164.5,24.1094 Q164.2813,23.8281 163.7969,23.8281 L162.2188,23.8281 L162.2188,28.4531 Q162.2188,28.5625 162.2656,28.6094 Q162.3281,28.6406 162.4688,28.6406 L164.1875,28.6406 Q165.0625,28.6406 165.6719,28.1563 Q166.2813,27.6563 166.7813,26.2188 L167.7344,26.5938 L166.8438,29.7344 L159.4688,29.7344 L159.4688,28.6406 L160.2031,28.6406 Q160.4063,28.6406 160.4375,28.6094 Q160.4688,28.5781 160.4688,28.4531 L160.4688,18.9688 Q160.4688,18.8438 160.4375,18.8125 Q160.4063,18.7813 160.2031,18.7813 L159.5313,18.7813 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="24" x="177" y="29.5576">&#x987E;&#x5BA2;</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="149" x2="203" y1="40" y2="40"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="149" x2="203" y1="48" y2="48"/><!--MD5=[e29e7fda9ee3342a0f7d1524a33e81e0]
+class 订餐订单--><rect fill="#FEFECE" filter="url(#fejzoopa6qamw)" height="48" id="&#x8BA2;&#x9910;&#x8BA2;&#x5355;" style="stroke: #A80036; stroke-width: 1.5;" width="80" x="136" y="224"/><ellipse cx="151" cy="240" fill="#90EE90" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M147.5313,234.7813 L147.5313,233.6875 L154.6406,233.6875 L155.5313,236.5 L154.625,236.8438 Q153.9844,235.6406 153.4531,235.2188 Q152.9375,234.7813 152.3281,234.7813 L150.4688,234.7813 Q150.3281,234.7813 150.2656,234.8281 Q150.2188,234.8594 150.2188,234.9688 L150.2188,238.7344 L151.7969,238.7344 Q152.2969,238.7344 152.5,238.5156 Q152.7188,238.2813 152.7188,237.75 L152.7188,237.0156 L153.7969,237.0156 L153.7969,241.6094 L152.7188,241.6094 L152.7188,241 Q152.7188,240.3906 152.5,240.1094 Q152.2813,239.8281 151.7969,239.8281 L150.2188,239.8281 L150.2188,244.4531 Q150.2188,244.5625 150.2656,244.6094 Q150.3281,244.6406 150.4688,244.6406 L152.1875,244.6406 Q153.0625,244.6406 153.6719,244.1563 Q154.2813,243.6563 154.7813,242.2188 L155.7344,242.5938 L154.8438,245.7344 L147.4688,245.7344 L147.4688,244.6406 L148.2031,244.6406 Q148.4063,244.6406 148.4375,244.6094 Q148.4688,244.5781 148.4688,244.4531 L148.4688,234.9688 Q148.4688,234.8438 148.4375,234.8125 Q148.4063,234.7813 148.2031,234.7813 L147.5313,234.7813 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="48" x="165" y="245.5576">&#x8BA2;&#x9910;&#x8BA2;&#x5355;</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="137" x2="215" y1="256" y2="256"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="137" x2="215" y1="264" y2="264"/><!--MD5=[618a6f6e6f2ce288aebbe8223ad5ca58]
+class 订餐支付--><rect fill="#FEFECE" filter="url(#fejzoopa6qamw)" height="48" id="&#x8BA2;&#x9910;&#x652F;&#x4ED8;" style="stroke: #A80036; stroke-width: 1.5;" width="80" x="97" y="440"/><ellipse cx="112" cy="456" fill="#90EE90" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M108.5313,450.7813 L108.5313,449.6875 L115.6406,449.6875 L116.5313,452.5 L115.625,452.8438 Q114.9844,451.6406 114.4531,451.2188 Q113.9375,450.7813 113.3281,450.7813 L111.4688,450.7813 Q111.3281,450.7813 111.2656,450.8281 Q111.2188,450.8594 111.2188,450.9688 L111.2188,454.7344 L112.7969,454.7344 Q113.2969,454.7344 113.5,454.5156 Q113.7188,454.2813 113.7188,453.75 L113.7188,453.0156 L114.7969,453.0156 L114.7969,457.6094 L113.7188,457.6094 L113.7188,457 Q113.7188,456.3906 113.5,456.1094 Q113.2813,455.8281 112.7969,455.8281 L111.2188,455.8281 L111.2188,460.4531 Q111.2188,460.5625 111.2656,460.6094 Q111.3281,460.6406 111.4688,460.6406 L113.1875,460.6406 Q114.0625,460.6406 114.6719,460.1563 Q115.2813,459.6563 115.7813,458.2188 L116.7344,458.5938 L115.8438,461.7344 L108.4688,461.7344 L108.4688,460.6406 L109.2031,460.6406 Q109.4063,460.6406 109.4375,460.6094 Q109.4688,460.5781 109.4688,460.4531 L109.4688,450.9688 Q109.4688,450.8438 109.4375,450.8125 Q109.4063,450.7813 109.2031,450.7813 L108.5313,450.7813 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="48" x="126" y="461.5576">&#x8BA2;&#x9910;&#x652F;&#x4ED8;</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="98" x2="176" y1="472" y2="472"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="98" x2="176" y1="480" y2="480"/><!--MD5=[5f43328e5a7fe91f1ed7e1326abb526e]
+class 订单菜品项--><rect fill="#FEFECE" filter="url(#fejzoopa6qamw)" height="48" id="&#x8BA2;&#x5355;&#x83DC;&#x54C1;&#x9879;" style="stroke: #A80036; stroke-width: 1.5;" width="92" x="212" y="440"/><ellipse cx="227" cy="456" fill="#90EE90" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M223.5313,450.7813 L223.5313,449.6875 L230.6406,449.6875 L231.5313,452.5 L230.625,452.8438 Q229.9844,451.6406 229.4531,451.2188 Q228.9375,450.7813 228.3281,450.7813 L226.4688,450.7813 Q226.3281,450.7813 226.2656,450.8281 Q226.2188,450.8594 226.2188,450.9688 L226.2188,454.7344 L227.7969,454.7344 Q228.2969,454.7344 228.5,454.5156 Q228.7188,454.2813 228.7188,453.75 L228.7188,453.0156 L229.7969,453.0156 L229.7969,457.6094 L228.7188,457.6094 L228.7188,457 Q228.7188,456.3906 228.5,456.1094 Q228.2813,455.8281 227.7969,455.8281 L226.2188,455.8281 L226.2188,460.4531 Q226.2188,460.5625 226.2656,460.6094 Q226.3281,460.6406 226.4688,460.6406 L228.1875,460.6406 Q229.0625,460.6406 229.6719,460.1563 Q230.2813,459.6563 230.7813,458.2188 L231.7344,458.5938 L230.8438,461.7344 L223.4688,461.7344 L223.4688,460.6406 L224.2031,460.6406 Q224.4063,460.6406 224.4375,460.6094 Q224.4688,460.5781 224.4688,460.4531 L224.4688,450.9688 Q224.4688,450.8438 224.4375,450.8125 Q224.4063,450.7813 224.2031,450.7813 L223.5313,450.7813 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="60" x="241" y="461.5576">&#x8BA2;&#x5355;&#x83DC;&#x54C1;&#x9879;</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="213" x2="303" y1="472" y2="472"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="213" x2="303" y1="480" y2="480"/><!--MD5=[ddebcd51bafed313fc364e0cd6889e0d]
+class 菜单菜品项--><rect fill="#FEFECE" filter="url(#fejzoopa6qamw)" height="48" id="&#x83DC;&#x5355;&#x83DC;&#x54C1;&#x9879;" style="stroke: #A80036; stroke-width: 1.5;" width="92" x="122" y="656"/><ellipse cx="137" cy="672" fill="#90EE90" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M133.5313,666.7813 L133.5313,665.6875 L140.6406,665.6875 L141.5313,668.5 L140.625,668.8438 Q139.9844,667.6406 139.4531,667.2188 Q138.9375,666.7813 138.3281,666.7813 L136.4688,666.7813 Q136.3281,666.7813 136.2656,666.8281 Q136.2188,666.8594 136.2188,666.9688 L136.2188,670.7344 L137.7969,670.7344 Q138.2969,670.7344 138.5,670.5156 Q138.7188,670.2813 138.7188,669.75 L138.7188,669.0156 L139.7969,669.0156 L139.7969,673.6094 L138.7188,673.6094 L138.7188,673 Q138.7188,672.3906 138.5,672.1094 Q138.2813,671.8281 137.7969,671.8281 L136.2188,671.8281 L136.2188,676.4531 Q136.2188,676.5625 136.2656,676.6094 Q136.3281,676.6406 136.4688,676.6406 L138.1875,676.6406 Q139.0625,676.6406 139.6719,676.1563 Q140.2813,675.6563 140.7813,674.2188 L141.7344,674.5938 L140.8438,677.7344 L133.4688,677.7344 L133.4688,676.6406 L134.2031,676.6406 Q134.4063,676.6406 134.4375,676.6094 Q134.4688,676.5781 134.4688,676.4531 L134.4688,666.9688 Q134.4688,666.8438 134.4375,666.8125 Q134.4063,666.7813 134.2031,666.7813 L133.5313,666.7813 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="60" x="151" y="677.5576">&#x83DC;&#x5355;&#x83DC;&#x54C1;&#x9879;</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="123" x2="213" y1="688" y2="688"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="123" x2="213" y1="696" y2="696"/><!--MD5=[86bab48e07683ca066a901237d513a1c]
+class 菜单--><rect fill="#FEFECE" filter="url(#fejzoopa6qamw)" height="48" id="&#x83DC;&#x5355;" style="stroke: #A80036; stroke-width: 1.5;" width="56" x="6" y="440"/><ellipse cx="21" cy="456" fill="#90EE90" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M17.5313,450.7813 L17.5313,449.6875 L24.6406,449.6875 L25.5313,452.5 L24.625,452.8438 Q23.9844,451.6406 23.4531,451.2188 Q22.9375,450.7813 22.3281,450.7813 L20.4688,450.7813 Q20.3281,450.7813 20.2656,450.8281 Q20.2188,450.8594 20.2188,450.9688 L20.2188,454.7344 L21.7969,454.7344 Q22.2969,454.7344 22.5,454.5156 Q22.7188,454.2813 22.7188,453.75 L22.7188,453.0156 L23.7969,453.0156 L23.7969,457.6094 L22.7188,457.6094 L22.7188,457 Q22.7188,456.3906 22.5,456.1094 Q22.2813,455.8281 21.7969,455.8281 L20.2188,455.8281 L20.2188,460.4531 Q20.2188,460.5625 20.2656,460.6094 Q20.3281,460.6406 20.4688,460.6406 L22.1875,460.6406 Q23.0625,460.6406 23.6719,460.1563 Q24.2813,459.6563 24.7813,458.2188 L25.7344,458.5938 L24.8438,461.7344 L17.4688,461.7344 L17.4688,460.6406 L18.2031,460.6406 Q18.4063,460.6406 18.4375,460.6094 Q18.4688,460.5781 18.4688,460.4531 L18.4688,450.9688 Q18.4688,450.8438 18.4375,450.8125 Q18.4063,450.7813 18.2031,450.7813 L17.5313,450.7813 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="24" x="35" y="461.5576">&#x83DC;&#x5355;</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="61" y1="472" y2="472"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="7" x2="61" y1="480" y2="480"/><!--MD5=[c55571b27e2318cee9c333379cd13d59]
+class 下单--><rect fill="#FEFECE" filter="url(#fejzoopa6qamw)" height="48" id="&#x4E0B;&#x5355;" style="stroke: #A80036; stroke-width: 1.5;" width="56" x="83" y="116"/><ellipse cx="98" cy="132" fill="#FFFF00" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M101.6875,128.6875 Q101.6875,130.1563 100.8594,130.9844 Q100.0469,131.8125 99.4375,131.8906 L101.2656,136.3906 Q101.3438,136.5469 101.4219,136.5938 Q101.5156,136.6406 101.6094,136.6406 L102.3594,136.6406 L102.3594,137.7344 L99.9219,137.7344 L97.7344,132.0156 L96.7813,132.0156 L96.7813,136.4531 Q96.7813,136.5625 96.8281,136.6094 Q96.8906,136.6406 97.0313,136.6406 L97.7813,136.6406 L97.7813,137.7344 L94.0313,137.7344 L94.0313,136.6406 L94.7813,136.6406 Q94.9688,136.6406 95,136.6094 Q95.0313,136.5781 95.0313,136.4531 L95.0313,126.9688 Q95.0313,126.8438 95,126.8125 Q94.9688,126.7813 94.7813,126.7813 L94.0313,126.7813 L94.0313,125.6875 L98.1563,125.6875 Q99.8125,125.6875 100.75,126.4375 Q101.6875,127.1875 101.6875,128.6875 Z M100.8125,137.3281 L100.8125,137.3281 Z M96.7813,130.9375 L97.8906,130.9375 Q98.7656,130.9375 99.3125,130.4375 Q99.875,129.9219 99.875,128.8281 Q99.875,127.8281 99.375,127.3125 Q98.8906,126.7813 97.7656,126.7813 L97.0313,126.7813 Q96.8906,126.7813 96.8281,126.8281 Q96.7813,126.8594 96.7813,126.9688 L96.7813,130.9375 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="24" x="112" y="137.5576">&#x4E0B;&#x5355;</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="84" x2="138" y1="148" y2="148"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="84" x2="138" y1="156" y2="156"/><!--MD5=[f6d522c49f83e9492f64faaa79ffb171]
+class 付款--><rect fill="#FEFECE" filter="url(#fejzoopa6qamw)" height="48" id="&#x4ED8;&#x6B3E;" style="stroke: #A80036; stroke-width: 1.5;" width="56" x="64" y="332"/><ellipse cx="79" cy="348" fill="#FFFF00" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M82.6875,344.6875 Q82.6875,346.1563 81.8594,346.9844 Q81.0469,347.8125 80.4375,347.8906 L82.2656,352.3906 Q82.3438,352.5469 82.4219,352.5938 Q82.5156,352.6406 82.6094,352.6406 L83.3594,352.6406 L83.3594,353.7344 L80.9219,353.7344 L78.7344,348.0156 L77.7813,348.0156 L77.7813,352.4531 Q77.7813,352.5625 77.8281,352.6094 Q77.8906,352.6406 78.0313,352.6406 L78.7813,352.6406 L78.7813,353.7344 L75.0313,353.7344 L75.0313,352.6406 L75.7813,352.6406 Q75.9688,352.6406 76,352.6094 Q76.0313,352.5781 76.0313,352.4531 L76.0313,342.9688 Q76.0313,342.8438 76,342.8125 Q75.9688,342.7813 75.7813,342.7813 L75.0313,342.7813 L75.0313,341.6875 L79.1563,341.6875 Q80.8125,341.6875 81.75,342.4375 Q82.6875,343.1875 82.6875,344.6875 Z M81.8125,353.3281 L81.8125,353.3281 Z M77.7813,346.9375 L78.8906,346.9375 Q79.7656,346.9375 80.3125,346.4375 Q80.875,345.9219 80.875,344.8281 Q80.875,343.8281 80.375,343.3125 Q79.8906,342.7813 78.7656,342.7813 L78.0313,342.7813 Q77.8906,342.7813 77.8281,342.8281 Q77.7813,342.8594 77.7813,342.9688 L77.7813,346.9375 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="24" x="93" y="353.5576">&#x4ED8;&#x6B3E;</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="65" x2="119" y1="364" y2="364"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="65" x2="119" y1="372" y2="372"/><!--MD5=[4ea5393e76810510c69376fd0535235d]
+class 包含1--><rect fill="#FEFECE" filter="url(#fejzoopa6qamw)" height="48" id="&#x5305;&#x542B;1" style="stroke: #A80036; stroke-width: 1.5;" width="63" x="274.5" y="332"/><ellipse cx="289.5" cy="348" fill="#FFFF00" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M293.1875,344.6875 Q293.1875,346.1563 292.3594,346.9844 Q291.5469,347.8125 290.9375,347.8906 L292.7656,352.3906 Q292.8438,352.5469 292.9219,352.5938 Q293.0156,352.6406 293.1094,352.6406 L293.8594,352.6406 L293.8594,353.7344 L291.4219,353.7344 L289.2344,348.0156 L288.2813,348.0156 L288.2813,352.4531 Q288.2813,352.5625 288.3281,352.6094 Q288.3906,352.6406 288.5313,352.6406 L289.2813,352.6406 L289.2813,353.7344 L285.5313,353.7344 L285.5313,352.6406 L286.2813,352.6406 Q286.4688,352.6406 286.5,352.6094 Q286.5313,352.5781 286.5313,352.4531 L286.5313,342.9688 Q286.5313,342.8438 286.5,342.8125 Q286.4688,342.7813 286.2813,342.7813 L285.5313,342.7813 L285.5313,341.6875 L289.6563,341.6875 Q291.3125,341.6875 292.25,342.4375 Q293.1875,343.1875 293.1875,344.6875 Z M292.3125,353.3281 L292.3125,353.3281 Z M288.2813,346.9375 L289.3906,346.9375 Q290.2656,346.9375 290.8125,346.4375 Q291.375,345.9219 291.375,344.8281 Q291.375,343.8281 290.875,343.3125 Q290.3906,342.7813 289.2656,342.7813 L288.5313,342.7813 Q288.3906,342.7813 288.3281,342.8281 Q288.2813,342.8594 288.2813,342.9688 L288.2813,346.9375 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="31" x="303.5" y="353.5576">&#x5305;&#x542B;1</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="275.5" x2="336.5" y1="364" y2="364"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="275.5" x2="336.5" y1="372" y2="372"/><!--MD5=[a27b39b00016ae31c44cbf8a1a42e630]
+class 选择--><rect fill="#FEFECE" filter="url(#fejzoopa6qamw)" height="48" id="&#x9009;&#x62E9;" style="stroke: #A80036; stroke-width: 1.5;" width="56" x="248" y="548"/><ellipse cx="263" cy="564" fill="#FFFF00" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M266.6875,560.6875 Q266.6875,562.1563 265.8594,562.9844 Q265.0469,563.8125 264.4375,563.8906 L266.2656,568.3906 Q266.3438,568.5469 266.4219,568.5938 Q266.5156,568.6406 266.6094,568.6406 L267.3594,568.6406 L267.3594,569.7344 L264.9219,569.7344 L262.7344,564.0156 L261.7813,564.0156 L261.7813,568.4531 Q261.7813,568.5625 261.8281,568.6094 Q261.8906,568.6406 262.0313,568.6406 L262.7813,568.6406 L262.7813,569.7344 L259.0313,569.7344 L259.0313,568.6406 L259.7813,568.6406 Q259.9688,568.6406 260,568.6094 Q260.0313,568.5781 260.0313,568.4531 L260.0313,558.9688 Q260.0313,558.8438 260,558.8125 Q259.9688,558.7813 259.7813,558.7813 L259.0313,558.7813 L259.0313,557.6875 L263.1563,557.6875 Q264.8125,557.6875 265.75,558.4375 Q266.6875,559.1875 266.6875,560.6875 Z M265.8125,569.3281 L265.8125,569.3281 Z M261.7813,562.9375 L262.8906,562.9375 Q263.7656,562.9375 264.3125,562.4375 Q264.875,561.9219 264.875,560.8281 Q264.875,559.8281 264.375,559.3125 Q263.8906,558.7813 262.7656,558.7813 L262.0313,558.7813 Q261.8906,558.7813 261.8281,558.8281 Q261.7813,558.8594 261.7813,558.9688 L261.7813,562.9375 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="24" x="277" y="569.5576">&#x9009;&#x62E9;</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="249" x2="303" y1="580" y2="580"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="249" x2="303" y1="588" y2="588"/><!--MD5=[986ad4247d89f064eeab6701f5163890]
+class 包含2--><rect fill="#FEFECE" filter="url(#fejzoopa6qamw)" height="48" id="&#x5305;&#x542B;2" style="stroke: #A80036; stroke-width: 1.5;" width="63" x="25.5" y="548"/><ellipse cx="40.5" cy="564" fill="#FFFF00" rx="11" ry="11" style="stroke: #A80036; stroke-width: 1.0;"/><path d="M44.1875,560.6875 Q44.1875,562.1563 43.3594,562.9844 Q42.5469,563.8125 41.9375,563.8906 L43.7656,568.3906 Q43.8438,568.5469 43.9219,568.5938 Q44.0156,568.6406 44.1094,568.6406 L44.8594,568.6406 L44.8594,569.7344 L42.4219,569.7344 L40.2344,564.0156 L39.2813,564.0156 L39.2813,568.4531 Q39.2813,568.5625 39.3281,568.6094 Q39.3906,568.6406 39.5313,568.6406 L40.2813,568.6406 L40.2813,569.7344 L36.5313,569.7344 L36.5313,568.6406 L37.2813,568.6406 Q37.4688,568.6406 37.5,568.6094 Q37.5313,568.5781 37.5313,568.4531 L37.5313,558.9688 Q37.5313,558.8438 37.5,558.8125 Q37.4688,558.7813 37.2813,558.7813 L36.5313,558.7813 L36.5313,557.6875 L40.6563,557.6875 Q42.3125,557.6875 43.25,558.4375 Q44.1875,559.1875 44.1875,560.6875 Z M43.3125,569.3281 L43.3125,569.3281 Z M39.2813,562.9375 L40.3906,562.9375 Q41.2656,562.9375 41.8125,562.4375 Q42.375,561.9219 42.375,560.8281 Q42.375,559.8281 41.875,559.3125 Q41.3906,558.7813 40.2656,558.7813 L39.5313,558.7813 Q39.3906,558.7813 39.3281,558.8281 Q39.2813,558.8594 39.2813,558.9688 L39.2813,562.9375 Z "/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="31" x="54.5" y="569.5576">&#x5305;&#x542B;2</text><line style="stroke: #A80036; stroke-width: 1.5;" x1="26.5" x2="87.5" y1="580" y2="580"/><line style="stroke: #A80036; stroke-width: 1.5;" x1="26.5" x2="87.5" y1="588" y2="588"/><ellipse cx="176" cy="140" fill="#000000" rx="2" ry="2" style="stroke: none; stroke-width: 1.0;"/><ellipse cx="157" cy="356" fill="#000000" rx="2" ry="2" style="stroke: none; stroke-width: 1.0;"/><ellipse cx="237" cy="356" fill="#000000" rx="2" ry="2" style="stroke: none; stroke-width: 1.0;"/><ellipse cx="211" cy="572" fill="#000000" rx="2" ry="2" style="stroke: none; stroke-width: 1.0;"/><ellipse cx="126" cy="572" fill="#000000" rx="2" ry="2" style="stroke: none; stroke-width: 1.0;"/><!--MD5=[ad91220b2373d735a726c0df5526d081]
+link 顾客 to apoint69--><path d="M176,56 C176,84.253 176,129.464 176,137.693 " fill="none" id="&#x987E;&#x5BA2;-apoint69" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="168.1469" y="78.9118">1</text><!--MD5=[993e591daaa2c9f1953fd82c33f37218]
+link apoint69 to 订餐订单--><path d="M176,142.19 C176,150.06 176,195.158 176,223.574 " fill="none" id="apoint69-&#x8BA2;&#x9910;&#x8BA2;&#x5355;" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="11" x="163.5906" y="213.1313">m</text><!--MD5=[ec84b9c92eea722af4293a157ff3383c]
+link 下单 to apoint69--><path d="M139.184,140 C150.785,140 162.386,140 173.987,140 " fill="none" id="&#x4E0B;&#x5355;-apoint69" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><!--MD5=[357d5b6f074dcf3e85825604303587b7]
+link 订餐订单 to apoint75--><path d="M171.877,272 C166.813,300.253 158.709,345.464 157.234,353.693 " fill="none" id="&#x8BA2;&#x9910;&#x8BA2;&#x5355;-apoint75" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="163.0189" y="294.9118">1</text><!--MD5=[5e00f3c68b067caf5122c56d9647b58b]
+link apoint75 to 订餐支付--><path d="M156.775,358.19 C155.291,366.06 146.782,411.158 141.42,439.574 " fill="none" id="apoint75-&#x8BA2;&#x9910;&#x652F;&#x4ED8;" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="134.6557" y="429.1313">1</text><!--MD5=[26177e177f5540f798398640c2743cd7]
+link 付款 to apoint75--><path d="M120.184,356 C131.785,356 143.386,356 154.987,356 " fill="none" id="&#x4ED8;&#x6B3E;-apoint75" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><!--MD5=[639783ff254f721671ae158b33f48f22]
+link 订餐订单 to apoint81--><path d="M189.236,272 C205.495,300.253 231.513,345.464 236.248,353.693 " fill="none" id="&#x8BA2;&#x9910;&#x8BA2;&#x5355;-apoint81" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="11" x="180.1217" y="294.9118">m</text><!--MD5=[2e02aac2521a7f4d47cc28ecb2d5a80b]
+link apoint81 to 订单菜品项--><path d="M237.236,358.19 C238.795,366.06 247.729,411.158 253.359,439.574 " fill="none" id="apoint81-&#x8BA2;&#x5355;&#x83DC;&#x54C1;&#x9879;" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="11" x="239.7604" y="429.1313">m</text><!--MD5=[1b11724170908ca438c49d89525da6ae]
+link apoint81 to 包含1--><path d="M239.156,356 C250.906,356 262.656,356 274.406,356 " fill="none" id="apoint81-&#x5305;&#x542B;1" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><!--MD5=[71c7285ec110d7b0d2b8b6a71011e041]
+link 订单菜品项 to apoint87--><path d="M247.802,488 C235.275,516.253 215.228,561.464 211.579,569.693 " fill="none" id="&#x8BA2;&#x5355;&#x83DC;&#x54C1;&#x9879;-apoint87" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="7" x="237.4631" y="510.9118">1</text><!--MD5=[ff7c2681547788cc487982c4fda39378]
+link apoint87 to 菜单菜品项--><path d="M210.517,574.19 C207.325,582.06 189.03,627.158 177.503,655.5738 " fill="none" id="apoint87-&#x83DC;&#x5355;&#x83DC;&#x54C1;&#x9879;" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="11" x="167.5288" y="645.1311">m</text><!--MD5=[bfd220997a771cb4735903dc77d0cc4b]
+link apoint87 to 选择--><path d="M213.031,572 C224.674,572 236.317,572 247.959,572 " fill="none" id="apoint87-&#x9009;&#x62E9;" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><!--MD5=[22cb93c4d6775c1fe73d41e9508bc45e]
+link 菜单 to apoint93--><path d="M53.9626,488 C78.9067,516.74 119.081,563.029 125.206,570.086 " fill="none" id="&#x83DC;&#x5355;-apoint93" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="11" x="46.4879" y="510.9118">m</text><!--MD5=[31236dd911a5f8c4150a6027c27ae54a]
+link apoint93 to 菜单菜品项--><path d="M126.472,574.19 C129.59,582.06 147.459,627.158 158.718,655.5738 " fill="none" id="apoint93-&#x83DC;&#x5355;&#x83DC;&#x54C1;&#x9879;" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="11" x="143.9301" y="645.1311">m</text><!--MD5=[594319deb036e739d28269bddd28d9ef]
+link 包含2 to apoint93--><path d="M88.5352,572 C100.3405,572 112.146,572 123.951,572 " fill="none" id="&#x5305;&#x542B;2-apoint93" style="stroke: #A80036; stroke-width: 1.0; stroke-dasharray: 7.0,7.0;"/><!--MD5=[91b7c0db1438df274f9e148d558315b4]
+@startuml
+
+hide empty description
+skinparam BackgroundColor pink
+
+class "顾客"<<(E,lightgreen)>>{
+}
+class "订餐订单"<<(E,lightgreen)>>{
+}
+class "订餐支付"<<(E,lightgreen)>> {
+}
+class "订单菜品项"<<(E,lightgreen)>> {
+}
+class "菜单菜品项"<<(E,lightgreen)>> {
+}
+class "菜单"<<(E,lightgreen)>> {
+}
+
+class "下单"<<(R,yellow)>>{
+}
+class "付款" <<(R,yellow)>>{
+}
+class "包含1"<<(R,yellow)>>{
+}
+class "选择"<<(R,yellow)>>{
+}
+class "包含2"<<(R,yellow)>>{
+}
+
+顾客 "1" - - "m" 订餐订单
+下单 . (顾客,订餐订单)
+
+订餐订单 "1" - - "1" 订餐支付
+付款 . (订餐订单, 订餐支付) 
+
+订餐订单 "m" - - "m" 订单菜品项
+(订餐订单, 订单菜品项) . 包含1
+
+订单菜品项 "1" - - "m" 菜单菜品项
+(订单菜品项, 菜单菜品项) . 选择
+
+菜单 "m" - - "m" 菜单菜品项
+包含2 . (菜单,菜单菜品项)
+
+@enduml
+
+PlantUML version 1.2019.11(Sun Sep 22 18:02:15 CST 2019)
+(MIT source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 13.0.1+9
+Operating System: Windows 10
+Default Encoding: GBK
+Language: zh
+Country: CN
+--></g></svg></p><p>&#x56FE;C-3 &#x98DF;&#x5802;&#x8BA2;&#x9910;&#x7CFB;&#x7EDF;&#x7248;&#x672C;1.0&#x7684;&#x5C40;&#x90E8;&#x6570;&#x636E;&#x6A21;&#x578B;</p>
+<h3 class="mume-header" id="42-%E6%95%B0%E6%8D%AE%E5%AD%97%E5%85%B8">4.2 &#x6570;&#x636E;&#x5B57;&#x5178;</h3>
+
+<pre class="language-text">(&#x7565;)
+</pre>
+<h3 class="mume-header" id="43-%E6%8A%A5%E8%A1%A8">4.3 &#x62A5;&#x8868;</h3>
+
+<h4 class="mume-header" id="431-%E8%AE%A2%E9%A4%90%E5%8E%86%E5%8F%B2%E6%8A%A5%E8%A1%A8">4.3.1 &#x8BA2;&#x9910;&#x5386;&#x53F2;&#x62A5;&#x8868;</h4>
+
+<table>
+<thead>
+<tr>
+<th>&#x62A5;&#x8868;ID</th>
+<th>COS-RPT-1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x62A5;&#x8868;&#x6807;&#x9898;</td>
+<td>&#x8BA2;&#x9910;&#x5386;&#x53F2;</td>
+</tr>
+<tr>
+<td>&#x62A5;&#x8868;&#x76EE;&#x7684;</td>
+<td>&#x987E;&#x5BA2;&#x5E0C;&#x671B;&#x67E5;&#x770B;&#x6B64;&#x524D;6&#x4E2A;&#x6708;&#x81F3;&#x4ECA;&#x7684;&#x67D0;&#x4E2A;&#x65F6;&#x95F4;&#x6BB5;&#x5185;&#xFF0C;&#x4ED6;&#x66FE;&#x5728;Process Impact&#x516C;&#x53F8;&#x98DF;&#x5802;&#x6216;&#x5F53;&#x5730;&#x9910;&#x9986;&#x9884;&#x5B9A;&#x7684;&#x6240;&#x6709;&#x8BA2;&#x5355;&#x5217;&#x8868;&#xFF0C;&#x4E00;&#x8FB9;&#x80FD;&#x591F;&#x518D;&#x6B21;&#x8BA2;&#x8D2D;&#x81EA;&#x5DF1;&#x559C;&#x6B22;&#x7684;&#x83DC;&#x54C1;</td>
+</tr>
+<tr>
+<td>&#x4F18;&#x5148;&#x7EA7;</td>
+<td>&#x4E2D;</td>
+</tr>
+<tr>
+<td>&#x62A5;&#x8868;&#x7528;&#x6237;</td>
+<td>&#x987E;&#x5BA2;</td>
+</tr>
+<tr>
+<td>&#x6570;&#x636E;&#x6E90;</td>
+<td>&#x4E4B;&#x524D;&#x5B58;&#x50A8;&#x8BA2;&#x9910;&#x8BA2;&#x5355;&#x7684;&#x6570;&#x636E;&#x5E93;</td>
+</tr>
+<tr>
+<td>&#x9891;&#x7387;&#x548C;&#x8BA1;&#x5212;</td>
+<td>&#x62A5;&#x8868;&#x6839;&#x636E;&#x7528;&#x6237;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x751F;&#x6210;&#x3002;&#x62A5;&#x8868;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x662F;&#x9759;&#x6001;&#x7684;&#x3002;&#x62A5;&#x8868;&#x80FD;&#x591F;&#x5728;&#x8BA1;&#x7B97;&#x673A;&#xFF0C;&#x5E73;&#x677F;&#x7535;&#x8111;&#x6216;&#x667A;&#x80FD;&#x624B;&#x673A;&#x7684;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x663E;&#x793A;&#x3002;&#x5982;&#x679C;&#x663E;&#x793A;&#x8BBE;&#x5907;&#x5141;&#x8BB8;&#x6253;&#x5370;&#x5219;&#x53EF;&#x4EE5;&#x6253;&#x5370;&#x62A5;&#x8868;</td>
+</tr>
+<tr>
+<td>&#x5EF6;&#x65F6;</td>
+<td>&#x5FC5;&#x987B;&#x5728;&#x987E;&#x5BA2;&#x8BF7;&#x6C42;&#x62A5;&#x8868;&#x4E4B;&#x540E;&#x4E09;&#x79D2;&#x5185;&#x5C55;&#x73B0;&#x7ED9;&#x987E;&#x5BA2;</td>
+</tr>
+<tr>
+<td>&#x53EF;&#x89C6;&#x5316;&#x5E03;&#x5C40;</td>
+<td>&#x6A2A;&#x5411;&#x65B9;&#x5F0F;</td>
+</tr>
+<tr>
+<td>&#x9875;&#x5934;&#x548C;&#x9875;&#x5C3E;</td>
+<td>&#x62A5;&#x8868;&#x9875;&#x5934;&#x5C06;&#x5305;&#x62EC;&#x62A5;&#x8868;&#x6807;&#x9898;&#xFF0C;&#x987E;&#x5BA2;&#x59D3;&#x540D;&#x548C;&#x6307;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#x8303;&#x56F4;&#x5185;&#x3002;&#x6253;&#x5370;&#x65F6;&#x62A5;&#x8868;&#x5C06;&#x663E;&#x793A;&#x9875;&#x7801;</td>
+</tr>
+<tr>
+<td>&#x62A5;&#x8868;&#x4E3B;&#x4F53;</td>
+<td>1.&#x5C55;&#x73B0;&#x7684;&#x5B57;&#x6BB5;&#x548C;&#x5217;&#x8868;&#x5934;&#x5305;&#x62EC;  2.&#x8BA2;&#x5355;&#x53F7;   3.&#x7528;&#x9910;&#x65E5;&#x671F;   4.&#x8BA2;&#x9910;&#x81EA;&#xFF08;&#x201C;&#x98DF;&#x5802;&#x201D;&#x6216;&#x9910;&#x9986;&#x540D;&#xFF09;  5.&#x8BA2;&#x8D2D;&#x9879;&#xFF08;&#x8BA2;&#x9910;&#x8BA2;&#x5355;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x9879;&#x7684;&#x5217;&#x8868;&#x4EE5;&#x53CA;&#x5404;&#x9879;&#x7684;&#x6570;&#x91CF;&#x548C;&#x4EF7;&#x683C;&#xFF09; 6.&#x9910;&#x54C1;&#x603B;&#x4EF7; 7.&#x7A0E;&#x8D39; 8.&#x9001;&#x9910;&#x8D39; 9.&#x8BA2;&#x5355;&#x603B;&#x4EF7;&#xFF08;&#x9910;&#x54C1;&#x603B;&#x4EF7;&#xFF0C;&#x7A0E;&#x8D39;&#xFF0C;&#x9001;&#x9910;&#x8D39;&#x4E4B;&#x548C;&#xFF09; 10.&#x7B5B;&#x9009;&#x6761;&#x4EF6;&#xFF1A;&#x987E;&#x5BA2;&#x5236;&#x5B9A;&#x7684;&#x65E5;&#x671F;&#x8303;&#x56F4;&#xFF0C;&#x542B;&#x7EC8;&#x70B9; &#x6392;&#x5E8F;&#x6761;&#x4EF6;&#xFF1A;&#x6309;&#x5148;&#x540E;&#x987A;&#x5E8F;</td>
+</tr>
+<tr>
+<td>&#x62A5;&#x8868;&#x7ED3;&#x675F;&#x7B26;</td>
+<td>&#x65E0;</td>
+</tr>
+<tr>
+<td>&#x4EA4;&#x4E92;&#x6027;</td>
+<td>&#x987E;&#x5BA2;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x4E0B;&#x94BB;&#x6765;&#x67E5;&#x770B;&#x8BA2;&#x5355;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x83DC;&#x7684;&#x539F;&#x6599;&#x548C;&#x8425;&#x517B;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td>&#x5B89;&#x5168;&#x8BBF;&#x95EE;&#x9650;&#x5236;</td>
+<td>&#x987E;&#x5BA2;&#x53EA;&#x80FD;&#x67E5;&#x770B;&#x81EA;&#x5DF1;&#x7684;&#x8BA2;&#x9910;&#x5386;&#x53F2;</td>
+</tr>
+</tbody>
+</table>
+<p>[&#x6CE8;&#xFF1A;&#x5176;&#x4ED6; COS&#x7CFB;&#x7EDF;&#x62A5;&#x8868;&#x5728;&#x672C;&#x9875;&#x4E2D;&#x4E0D;&#x63D0;&#x4F9B;]</p>
+<h3 class="mume-header" id="44-%E6%95%B0%E6%8D%AE%E9%9B%86%E6%88%90-%E7%95%99%E5%AD%98%E5%92%8C%E9%94%80%E6%AF%81">4.4 &#x6570;&#x636E;&#x96C6;&#x6210;&#x3001;&#x7559;&#x5B58;&#x548C;&#x9500;&#x6BC1;</h3>
+
+<pre class="language-text">DI-1&#xFF1A; COS&#x7CFB;&#x7EDF;&#x5C06;&#x81EA;&#x9001;&#x9910;&#x65E5;&#x671F;&#x8D77;&#xFF0C;&#x4E3A;&#x987E;&#x5BA2;&#x7684;&#x6BCF;&#x4E2A;&#x8BA2;&#x5355;&#x4FDD;&#x7559;6&#x4E2A;&#x6708;
+DI-2&#xFF1A; COS&#x7CFB;&#x7EDF;&#x5C06;&#x81EA;&#x83DC;&#x5355;&#x65E5;&#x671F;&#x8D77;&#xFF0C;&#x4FDD;&#x7559;&#x83DC;&#x5355;1&#x5E74;
+</pre>
+<h2 class="mume-header" id="5-%E5%A4%96%E9%83%A8%E6%8E%A5%E5%8F%A3%E9%9C%80%E6%B1%82">5. &#x5916;&#x90E8;&#x63A5;&#x53E3;&#x9700;&#x6C42;</h2>
+
+<h3 class="mume-header" id="51-%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2">5.1 &#x7528;&#x6237;&#x754C;&#x9762;</h3>
+
+<pre class="language-text">UI-1&#xFF1A; &#x98DF;&#x5802;&#x9884;&#x5B9A;&#x7CFB;&#x7EDF;&#x754C;&#x9762;&#x663E;&#x793A;&#x5E94;&#x9075;&#x5FAA;&#x300A;Process Impact&#x516C;&#x53F8;&#x4E92;&#x8054;&#x7F51;&#x5E94;&#x7528;&#x7528;&#x6237;&#x754C;&#x9762;&#x6807;&#x51C6;2.0&#x7248;&#x300B;
+UI-2&#xFF1A; &#x7CFB;&#x7EDF;&#x4E3A;&#x6BCF;&#x4E2A;&#x5C55;&#x73B0;&#x7684;&#x7F51;&#x9875;&#x63D0;&#x4F9B;&#x4E00;&#x4E2A;&#x5E2E;&#x52A9;&#x94FE;&#x63A5;&#x6765;&#x8BF4;&#x660E;&#x5982;&#x4F55;&#x4F7F;&#x7528;&#x8BE5;&#x9875;&#x9762;
+UI-3&#xFF1A; &#x9875;&#x9762;&#x5C06;&#x5141;&#x8BB8;&#x4EC5;&#x901A;&#x8FC7;&#x952E;&#x76D8;&#x5373;&#x53EF;&#x5B8C;&#x6210;&#x5BFC;&#x822A;&#x548C;&#x9009;&#x62E9;&#x83DC;&#x54C1;&#xFF0C;&#x6B64;&#x5916;&#x8FD8;&#x53EF;&#x901A;&#x8FC7;&#x952E;&#x76D8;&#x4E0E;&#x9F20;&#x6807;&#x7ED3;&#x5408;&#x7684;&#x65B9;&#x5F0F;&#x5B8C;&#x6210;
+</pre>
+<h3 class="mume-header" id="52-%E8%BD%AF%E4%BB%B6%E6%8E%A5%E5%8F%A3">5.2 &#x8F6F;&#x4EF6;&#x63A5;&#x53E3;</h3>
+
+<pre class="language-text">SI-1&#xFF1A; &#x98DF;&#x5802;&#x5E93;&#x5B58;&#x7CFB;&#x7EDF;
+    SI-1.1&#xFF1A; COS&#x7CFB;&#x7EDF;&#x5C06;&#x901A;&#x8FC7;&#x7F16;&#x7A0B;&#x63A5;&#x53E3;&#x5C06;&#x9884;&#x8BA2;&#x83DC;&#x54C1;&#x7684;&#x6570;&#x91CF;&#x4F20;&#x9012;&#x7ED9;&#x98DF;&#x5802;&#x5E93;&#x5B58;&#x7CFB;&#x7EDF;
+    SI-1.2&#xFF1A; COS&#x7CFB;&#x7EDF;&#x5C06;&#x5BF9;&#x98DF;&#x5802;&#x5E93;&#x5B58;&#x7CFB;&#x7EDF;&#x8FDB;&#x884C;&#x8C03;&#x53D6;&#xFF0C;&#x786E;&#x5B9A;&#x6240;&#x8BF7;&#x6C42;&#x7684;&#x83DC;&#x54C1;&#x662F;&#x5426;&#x53EF;&#x7528;
+    SI-1.3&#xFF1A; &#x5F53;&#x98DF;&#x5E38;&#x5E93;&#x5B58;&#x7CFB;&#x7EDF;&#x901A;&#x77E5;COS&#x7CFB;&#x7EDF;&#x67D0;&#x79CD;&#x7279;&#x5B9A;&#x7684;&#x83DC;&#x54C1;&#x4E0D;&#x518D;&#x53EF;&#x7528;&#x65F6;&#xFF0C;COS&#x7CFB;&#x7EDF;&#x5C06;&#x4F1A;&#x4ECE;&#x5F53;&#x5929;&#x7684;&#x83DC;&#x5355;&#x4E2D;&#x79FB;&#x9664;&#x8BE5;&#x83DC;&#x54C1;
+SI-2&#xFF1A; &#x85AA;&#x8D44;&#x7CFB;&#x7EDF;&#xFF1A; COS&#x7CFB;&#x7EDF;&#x5C06;&#x901A;&#x8FC7;&#x7F16;&#x7A0B;&#x63A5;&#x53E3;&#x4E0E;&#x85AA;&#x8D44;&#x7CFB;&#x7EDF;&#x8FDB;&#x884C;&#x901A;&#x4FE1;&#x4EE5;&#x5B8C;&#x6210;&#x4EE5;&#x4E0B;&#x64CD;&#x4F5C;&#xFF1A;
+    SI-2.1&#xFF1A; &#x5141;&#x8BB8;&#x987E;&#x5BA2;&#x6CE8;&#x518C;&#x6216;&#x6CE8;&#x9500;&#x85AA;&#x8D44;&#x62B5;&#x6263;
+    SI-2.2&#xFF1A; &#x67E5;&#x8BE2;&#x987E;&#x5BA2;&#x662F;&#x5426;&#x6CE8;&#x518C;&#x4E86;&#x85AA;&#x8D44;&#x62B5;&#x6263;
+    SI-2.3&#xFF1A; &#x67E5;&#x8BE2;&#x987E;&#x5BA2;&#x662F;&#x5426;&#x6709;&#x8D44;&#x683C;&#x6CE8;&#x518C;&#x85AA;&#x8D44;&#x62B5;&#x6263;
+    SI-2.4&#xFF1A; &#x63D0;&#x4EA4;&#x8BA2;&#x9910;&#x652F;&#x4ED8;&#x8BF7;&#x6C42;
+    SI-2.5&#xFF1A; &#x7531;&#x4E8E;&#x987E;&#x5BA2;&#x62D2;&#x6536;&#x6216;&#x4E0D;&#x6EE1;&#xFF0C;&#x6216;&#x7531;&#x4E8E;&#x6709;&#x672A;&#x9001;&#x8FBE;&#x7684;&#x9001;&#x9910;&#x6307;&#x4EE4;&#xFF0C;&#x56E0;&#x6B64;&#x8981;&#x8FD4;&#x8FD8;&#x6B64;&#x524D;&#x7684;&#x8D39;&#x7528;
+</pre>
+<h3 class="mume-header" id="53-%E7%A1%AC%E4%BB%B6%E6%8E%A5%E5%8F%A3">5.3 &#x786C;&#x4EF6;&#x63A5;&#x53E3;</h3>
+
+<pre class="language-text">&#x4E0D;&#x8BC6;&#x522B;&#x786C;&#x4EF6;&#x63A5;&#x53E3;
+</pre>
+<h3 class="mume-header" id="54-%E9%80%9A%E4%BF%A1%E6%8E%A5%E5%8F%A3">5.4 &#x901A;&#x4FE1;&#x63A5;&#x53E3;</h3>
+
+<pre class="language-text">CI-1&#xFF1A; COS&#x7CFB;&#x7EDF;&#x5C06;&#x6839;&#x636E;&#x7528;&#x6237;&#x8D26;&#x6237;&#x8BBE;&#x7F6E;&#x5411;&#x987E;&#x5BA2;&#x53D1;&#x9001;email&#x6216;text message&#xFF0C;&#x4EE5;&#x786E;&#x8BA4;&#x8BA2;&#x5355;&#x3001;&#x4EF7;&#x683C;&#x4EE5;&#x53CA;&#x9001;&#x9910;&#x6307;&#x4EE4;&#x5DF2;&#x88AB;&#x63A5;&#x53D7;
+CI-2&#xFF1A; COS&#x7CFB;&#x7EBA;&#x5C06;&#x6839;&#x636E;&#x7528;&#x6237;&#x8D26;&#x6237;&#x8BBE;&#x7F6E;&#x5411;&#x987E;&#x5BA2;&#x53D1;&#x9001;email&#x6216;text message&#xFF0C;&#x4EE5;&#x62A5;&#x544A;&#x5728;&#x8BA2;&#x5355;&#x6216;&#x9001;&#x9910;&#x4E2D;&#x7684;&#x4EFB;&#x4F55;&#x95EE;&#x9898;
+</pre>
+<h2 class="mume-header" id="6-%E8%B4%A8%E9%87%8F%E5%B1%9E%E6%80%A7">6. &#x8D28;&#x91CF;&#x5C5E;&#x6027;</h2>
+
+<h3 class="mume-header" id="61-%E6%98%93%E7%94%A8%E6%80%A7%E9%9C%80%E6%B1%82">6.1 &#x6613;&#x7528;&#x6027;&#x9700;&#x6C42;</h3>
+
+<pre class="language-text">USE-1&#xFF1A; COS&#x7CFB;&#x7EDF;&#x5C06;&#x5141;&#x8BB8;&#x987E;&#x5BA2;&#x901A;&#x8FC7;&#x5355;&#x6B21;&#x4EA4;&#x4E92;&#x5BF9;&#x4E4B;&#x524D;&#x9884;&#x8BA2;&#x7684;&#x996D;&#x83DC;&#x8FDB;&#x884C;&#x67E5;&#x627E;
+USE-2&#xFF1A; 95%&#x7684;&#x65B0;&#x7528;&#x6237;&#x9996;&#x6B21;&#x5C1D;&#x8BD5;&#x8BA2;&#x9910;&#x80FD;&#x591F;&#x6210;&#x529F;
+</pre>
+<h3 class="mume-header" id="62-%E6%80%A7%E8%83%BD%E9%9C%80%E6%B1%82">6.2 &#x6027;&#x80FD;&#x9700;&#x6C42;</h3>
+
+<pre class="language-text">PER-1&#xFF1A; &#x7CFB;&#x7EDF;&#x5E94;&#x5BB9;&#x7EB3;400&#x4E2A;&#x7528;&#x6237;&#x548C;100&#x4E2A;&#x5E76;&#x53D1;&#x7528;&#x6237;&#xFF08;&#x5F53;&#x5730;&#x65F6;&#x95F4;&#x4E0A;&#x5348;09:00&#x81F3;&#x4E0A;&#x5348;10:00&#x7684;&#x4F7F;&#x7528;&#x9AD8;&#x5CF0;&#x65F6;&#x6BB5;&#x3001;&#x6BCF;&#x4E2A;&#x4F1A;&#x8BDD;&#x5E73;&#x5747;&#x65F6;&#x957F;8&#x5206;&#x949F;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF09;
+PER-2&#xFF1A; &#x5728;20Mbps&#x6216;&#x66F4;&#x5FEB;&#x901F;&#x7684;&#x4E92;&#x8054;&#x7F51;&#x8FDE;&#x63A5;&#x4E0B;&#xFF0C;95%&#x7531;COS&#x7CFB;&#x7EDF;&#x751F;&#x6210;&#x7684;&#x7F51;&#x9875;&#x80FD;&#x5728;&#x7528;&#x6237;&#x8BF7;&#x6C42;&#x9875;&#x9762;&#x4E4B;&#x540E;4&#x79D2;&#x949F;&#x5185;&#x5B8C;&#x6210;&#x4E0B;&#x8F7D;
+PER-3&#xFF1A; &#x7CFB;&#x7EDF;&#x5728;&#x7528;&#x6237;&#x63D0;&#x4EA4;&#x4FE1;&#x606F;&#x540E;&#xFF0C;&#x5411;&#x7528;&#x6237;&#x663E;&#x793A;&#x786E;&#x8BA4;&#x4FE1;&#x606F;&#x5E73;&#x5747;&#x4E0D;&#x8D85;&#x8FC7;3&#x79D2;&#x949F;&#xFF0C;&#x6700;&#x591A;6&#x79D2;&#x949F;
+</pre>
+<h3 class="mume-header" id="63%E4%BF%9D%E5%AF%86%E6%80%A7%E9%9C%80%E6%B1%82">6.3&#x4FDD;&#x5BC6;&#x6027;&#x9700;&#x6C42;</h3>
+
+<pre class="language-text">SEC-1&#xFF1A; &#x6240;&#x6709;&#x542B;&#x6709;&#x8D22;&#x52A1;&#x4FE1;&#x606F;&#x6216;&#x4E2A;&#x4EBA;&#x8EAB;&#x4EFD;&#x4FE1;&#x606F;&#x7684;&#x7F51;&#x7EDC;&#x4E8B;&#x52A1;&#x5C06;&#x6309;&#x7167;BR-33&#x8FDB;&#x884C;&#x52A0;&#x5BC6;
+SEC-2&#xFF1A; &#x9664;&#x67E5;&#x770B;&#x83DC;&#x5355;&#x5916;&#xFF0C;&#x7528;&#x6237;&#x8FDB;&#x884C;&#x6240;&#x6709;&#x64CD;&#x4F5C;&#x90FD;&#x9700;&#x8981;&#x767B;&#x5F55;&#x5230;COS&#x7CFB;&#x7EDF;
+SEC-3&#xFF1A; &#x53EA;&#x6709;&#x6388;&#x6743;&#x7684;&#x83DC;&#x5355;&#x7ECF;&#x7406;&#x5141;&#x8BB8;&#x5BF9;&#x83DC;&#x5355;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;&#x6309;&#x7167;BR-24
+SEC-4&#xFF1A; &#x7CFB;&#x7EDF;&#x53EA;&#x5141;&#x8BB8;&#x987E;&#x5BA2;&#x67E5;&#x770B;&#x81EA;&#x5DF1;&#x4E0B;&#x7684;&#x8BA2;&#x5355;
+</pre>
+<h3 class="mume-header" id="64-%E5%AE%89%E5%85%A8%E9%9C%80%E6%B1%82">6.4 &#x5B89;&#x5168;&#x9700;&#x6C42;</h3>
+
+<pre class="language-text">SAF-1&#xFF1A; &#x7528;&#x6237;&#x5C06;&#x80FD;&#x591F;&#x770B;&#x5230;&#x4EFB;&#x4F55;&#x4E00;&#x4E2A;&#x83DC;&#x54C1;&#x7684;&#x5168;&#x90E8;&#x6210;&#x5206;&#x5217;&#x8868;&#xFF0C;&#x5E76;&#x5BF9;&#x5DF2;&#x77E5;&#x7684;&#x5BFC;&#x81F4;0.5%&#x5317;&#x7F8E;&#x4EBA;&#x53E3;&#x8FC7;&#x654F;&#x7684;&#x6210;&#x5206;&#x8FDB;&#x884C;&#x9AD8;&#x4EAE;&#x663E;&#x793A;
+</pre>
+<h3 class="mume-header" id="65-%E5%8F%AF%E7%94%A8%E6%80%A7%E9%9C%80%E6%B1%82">6.5 &#x53EF;&#x7528;&#x6027;&#x9700;&#x6C42;</h3>
+
+<pre class="language-text">AVL-1&#xFF1A; COS&#x7CFB;&#x7EDF;&#x5728;&#x4E0A;&#x5348;05:00&#x81F3;&#x5F53;&#x5730;&#x65F6;&#x95F4;&#x5348;&#x591C;&#x4E4B;&#x95F4;&#x81F3;&#x5C11;98%&#x7684;&#x65F6;&#x95F4;&#x53EF;&#x7528;&#xFF0C;&#x5728;&#x5F53;&#x5730;&#x65F6;&#x95F4;&#x5348;&#x591C;&#x81F3;&#x4E0A;&#x5348;05:00&#x4E4B;&#x95F4;&#x5230;&#x5C11;90%&#x7684;&#x65F6;&#x95F4;&#x53EF;&#x7528;&#xFF08;&#x4E0D;&#x5305;&#x62EC;&#x8BA1;&#x5212;&#x5185;&#x7684;&#x7EF4;&#x62A4;&#x65F6;&#x95F4;&#x6BB5;&#xFF09;
+</pre>
+<h3 class="mume-header" id="66-%E5%81%A5%E5%A3%AE%E6%80%A7%E9%9C%80%E6%B1%82">6.6 &#x5065;&#x58EE;&#x6027;&#x9700;&#x6C42;</h3>
+
+<pre class="language-text">ROB-1&#xFF1A; &#x5982;&#x679C;&#x7528;&#x6237;&#x4E0E;COS&#x7CFB;&#x7EDF;&#x95F4;&#x7684;&#x8FDE;&#x63A5;&#x5728;&#x5BF9;&#x65B0;&#x8BA2;&#x5355;&#x8FDB;&#x884C;&#x786E;&#x8BA4;&#x6216;&#x7EC8;&#x6B62;&#x4E4B;&#x524D;&#x65AD;&#x5F00;&#xFF0C;COS&#x7CFB;&#x7EDF;&#x80FD;&#x591F;&#x4F7F;&#x7528;&#x7528;&#x6237;&#x6062;&#x590D;&#x672A;&#x5B8C;&#x6210;&#x7684;&#x8BA2;&#x5355;&#x5E76;&#x7EE7;&#x7EED;&#x5BF9;&#x8BE5;&#x8BA2;&#x5355;&#x8FDB;&#x884C;&#x5904;&#x7406;
+</pre>
+<h2 class="mume-header" id="%E9%99%84%E5%BD%95a%E5%88%86%E6%9E%90%E6%A8%A1%E5%9E%8Banalysis-models">&#x9644;&#x5F55;A&#xFF1A;&#x5206;&#x6790;&#x6A21;&#x578B;Analysis Models</h2>
+
+<p>&#x56FE;C-4&#x662F;&#x4E00;&#x5E45;&#x72B6;&#x6001;&#x8F6C;&#x6362;&#x56FE;&#xFF0C;&#x5C55;&#x73B0;&#x4E86;&#x53EF;&#x80FD;&#x7684;&#x8BA2;&#x9910;&#x8BA2;&#x5355;&#x72B6;&#x6001;&#x4EE5;&#x53CA;&#x6240;&#x5141;&#x8BB8;&#x7684;&#x72B6;&#x6001;&#x8F6C;&#x53D8;</p>
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentscripttype="application/ecmascript" contentstyletype="text/css" height="589px" preserveAspectRatio="none" style="width:406px;height:589px;background:#FFC0CB;" version="1.1" viewBox="0 0 406 589" width="406px" zoomAndPan="magnify"><defs><filter height="300%" id="f1oj4jrbj4swij" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><rect fill="#FEFECE" filter="url(#f1oj4jrbj4swij)" height="40" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="52" x="271" y="8"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="42" x="276" y="34.4839">&#x672A;&#x5B8C;&#x6210;</text><rect fill="#FEFECE" filter="url(#f1oj4jrbj4swij)" height="40" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="52" x="175" y="145"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="42" x="180" y="171.4839">&#x5DF2;&#x63A5;&#x53D7;</text><rect fill="#FEFECE" filter="url(#f1oj4jrbj4swij)" height="40" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="52" x="232" y="419"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="42" x="237" y="445.4839">&#x5DF2;&#x53D6;&#x6D88;</text><rect fill="#FEFECE" filter="url(#f1oj4jrbj4swij)" height="40" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="52" x="136" y="282"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="42" x="141" y="308.4839">&#x5DF2;&#x5907;&#x9910;</text><rect fill="#FEFECE" filter="url(#f1oj4jrbj4swij)" height="40" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="52" x="6" y="419"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="42" x="11" y="445.4839">&#x5F85;&#x9001;&#x9910;</text><rect fill="#FEFECE" filter="url(#f1oj4jrbj4swij)" height="40" rx="12.5" ry="12.5" style="stroke: #A80036; stroke-width: 1.5;" width="52" x="6" y="538"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="42" x="11" y="564.4839">&#x5DF2;&#x9001;&#x9910;</text><!--MD5=[fbf7efd63afd8aa60e0fc939857883b7]
+link 未完成 to 已接受--><path d="M283.449,48.056 C266.251,72.241 236.583,113.962 217.917,140.21 " fill="none" id="&#x672A;&#x5B8C;&#x6210;-&gt;&#x5DF2;&#x63A5;&#x53D7;" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="214.793,144.604,223.2676,139.5859,217.6899,140.5287,216.7471,134.9509,214.793,144.604" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="52" x="261" y="93.8979">&#x7CFB;&#x7EDF;&#x63A5;&#x53D7;</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="26" x="274" y="111.6523">&#x8BA2;&#x5355;</text><!--MD5=[eb9dce6d82949722289bfa36efc93f5b]
+link 未完成 to 已取消--><path d="M309.459,48.198 C314.403,56.921 319.5,67.6 322,78 C333.088,124.131 376.803,81.717 319,322 C310.718,356.428 289.963,391.866 274.96,414.363 " fill="none" id="&#x672A;&#x5B8C;&#x6210;-&gt;&#x5DF2;&#x53D6;&#x6D88;" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="272.041,418.686,280.3914,413.4639,274.8382,414.5416,273.7605,408.9884,272.041,418.686" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="52" x="342" y="230.8979">&#x987E;&#x5BA2;&#x53D6;&#x6D88;</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="39" x="348.5" y="248.6523">&#x672A;&#x652F;&#x4ED8;</text><!--MD5=[3c734953a4ee20bc8ae1bb106e4ad5e1]
+link 已接受 to 已取消--><path d="M218.222,185.129 C224.926,193.674 231.957,204.235 236,215 C261.711,283.454 261.527,371.602 259.612,413.623 " fill="none" id="&#x5DF2;&#x63A5;&#x53D7;-&gt;&#x5DF2;&#x53D6;&#x6D88;" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="259.359,418.756,263.7964,409.9634,259.6047,413.762,255.8061,409.5703,259.359,418.756" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="52" x="258" y="299.3979">&#x987E;&#x5BA2;&#x53D6;&#x6D88;</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="39" x="264.5" y="317.1523">&#x672A;&#x652F;&#x4ED8;</text><!--MD5=[2ce373e402de110d7eb4f8a41b1f602c]
+link 已接受 to 已备餐--><path d="M190.651,185.091 C186.202,193.97 181.282,204.802 178,215 C171.464,235.307 167.283,259.221 164.841,276.671 " fill="none" id="&#x5DF2;&#x63A5;&#x53D7;-&gt;&#x5DF2;&#x5907;&#x9910;" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="164.138,281.867,169.3077,273.4841,164.8079,276.9121,161.3799,272.4122,164.138,281.867" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="52" x="179" y="230.8979">&#x81EA;&#x52A9;&#x9910;&#x5385;</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="52" x="179" y="248.6523">&#x51C6;&#x5907;&#x98DF;&#x7269;</text><!--MD5=[d5dd5c834609b433fa0360f5badd1158]
+link 已备餐 to 待送餐--><path d="M135.664,313.178 C117.132,321.4 92.7431,334.486 76,352 C59.0506,369.73 47.1069,395.27 39.9813,413.91 " fill="none" id="&#x5DF2;&#x5907;&#x9910;-&gt;&#x5F85;&#x9001;&#x9910;" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="38.0991,418.972,44.9853,411.9307,39.8419,414.2856,37.487,409.1422,38.0991,418.972" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="78" x="77" y="367.8979">&#x98DF;&#x5802;&#x5DE5;&#x4F5C;&#x4EBA;&#x5458;</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="52" x="90" y="385.6523">&#x8BF7;&#x6C42;&#x9001;&#x9910;</text><!--MD5=[f69702b123b6ff37e47f5ad33e409f41]
+link 已备餐 to 已取消--><path d="M161.256,322.116 C161.456,340.749 164.314,369.106 178,389 C189.897,406.294 210.092,418.594 227.214,426.546 " fill="none" id="&#x5DF2;&#x5907;&#x9910;-&gt;&#x5DF2;&#x53D6;&#x6D88;" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="231.953,428.674,225.3817,421.3379,227.3919,426.6256,222.1042,428.6357,231.953,428.674" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="52" x="179" y="367.8979">&#x987E;&#x5BA2;&#x53D6;&#x6D88;</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="39" x="185.5" y="385.6523">&#x5DF2;&#x652F;&#x4ED8;</text><!--MD5=[061d6f6f3a584a46bc41e2123e15b1b8]
+link 待送餐 to 已送餐--><path d="M32,459.058 C32,479.2006 32,511.0194 32,532.8921 " fill="none" id="&#x5F85;&#x9001;&#x9910;-&gt;&#x5DF2;&#x9001;&#x9910;" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="32,537.9497,36,528.9497,32,532.9497,28,528.9497,32,537.9497" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="78" x="33" y="504.8979">&#x9001;&#x9910;&#x4EBA;&#x5458;&#x9001;&#x9910;</text><!--MD5=[81e6f978248dc832d78aac6e03677762]
+link 待送餐 to 已接受--><path d="M31.7462,418.809 C32.2198,387.598 36.943,325.009 65,282 C92.3927,240.009 139.374,204.82 170.311,184.57 " fill="none" id="&#x5F85;&#x9001;&#x9910;-&gt;&#x5DF2;&#x63A5;&#x53D7;" style="stroke: #A80036; stroke-width: 1.0;"/><polygon fill="#A80036" points="174.755,181.692,165.0266,183.2275,170.5584,184.4102,169.3757,189.942,174.755,181.692" style="stroke: #A80036; stroke-width: 1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="52" x="66" y="308.3979">&#x987E;&#x5BA2;&#x62D2;&#x6536;</text><!--MD5=[259485e118c83c471fa9bbb274c35131]
+@startuml
+
+hide empty description
+skinparam BackgroundColor pink
+
+
+state "未完成" 
+state "已接受" 
+state "已取消" 
+state "已备餐" 
+state "待送餐" 
+state "已送餐" 
+
+未完成 - -> 已接受:系统接受\n订单
+未完成 - -> 已取消:顾客取消\n未支付
+已接受 - -> 已取消:顾客取消\n未支付
+已接受 - -> 已备餐:自助餐厅\n准备食物
+已备餐 - -> 待送餐:食堂工作人员\n请求送餐
+已备餐 - -> 已取消:顾客取消\n已支付
+待送餐 - -> 已送餐:送餐人员送餐
+待送餐 - -> 已接受:顾客拒收
+
+
+@enduml
+
+PlantUML version 1.2019.11(Sun Sep 22 18:02:15 CST 2019)
+(MIT source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 13.0.1+9
+Operating System: Windows 10
+Default Encoding: GBK
+Language: zh
+Country: CN
+--></g></svg></p>
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

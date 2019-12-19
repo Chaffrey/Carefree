@@ -1,0 +1,25 @@
+@startuml
+
+hide empty description
+skinparam BackgroundColor pink
+
+'left to right direction
+
+state "未完成" 
+state "已接受" 
+state "已取消" 
+state "已备餐" 
+state "待送餐" 
+state "已送餐" 
+
+未完成 --> 已接受:系统接受\n订单
+未完成 --> 已取消:顾客取消\n未支付
+已接受 --> 已取消:顾客取消\n未支付
+已接受 --> 已备餐:自助餐厅\n准备食物
+已备餐 --> 待送餐:食堂工作人员\n请求送餐
+已备餐 --> 已取消:顾客取消\n已支付
+待送餐 --> 已送餐:送餐人员送餐
+待送餐 --> 已接受:顾客拒收
+
+
+@enduml

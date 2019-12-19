@@ -1,0 +1,45 @@
+@startuml
+
+hide empty description
+skinparam BackgroundColor pink
+
+class "顾客"<<(E,lightgreen)>>{
+}
+class "订餐订单"<<(E,lightgreen)>>{
+}
+class "订餐支付"<<(E,lightgreen)>> {
+}
+class "订单菜品项"<<(E,lightgreen)>> {
+}
+class "菜单菜品项"<<(E,lightgreen)>> {
+}
+class "菜单"<<(E,lightgreen)>> {
+}
+
+class "下单"<<(R,yellow)>>{
+}
+class "付款" <<(R,yellow)>>{
+}
+class "包含1"<<(R,yellow)>>{
+}
+class "选择"<<(R,yellow)>>{
+}
+class "包含2"<<(R,yellow)>>{
+}
+
+顾客 "1" -- "m" 订餐订单
+下单 . (顾客,订餐订单)
+
+订餐订单 "1" -- "1" 订餐支付
+付款 . (订餐订单, 订餐支付) 
+
+订餐订单 "m" -- "m" 订单菜品项
+(订餐订单, 订单菜品项) . 包含1
+
+订单菜品项 "1" -- "m" 菜单菜品项
+(订单菜品项, 菜单菜品项) . 选择
+
+菜单 "m" -- "m" 菜单菜品项
+包含2 . (菜单,菜单菜品项)
+
+@enduml
